@@ -1,0 +1,4 @@
+*/__pycache__
+*/*/__pycache__
+project_apps/migrations/0001_initial.py
+db.sqlite3

@@ -1,0 +1,31 @@
+#main{
+    background-color: whitesmoke;
+    width: 80%;
+    height: 800px;
+    text-align: center;
+}
+
+*{
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+p {
+    font-size: 22px;
+}
+
+.container{
+    background-color: #1d2c41;
+}
+
+.container.time0 {
+    background-color: #b7c9D9;
+    transition: background-color 1s;
+}
+.container.time1 {
+    background-color: #4FA3F0;
+    transition: background-color 1s;
+}
+.container.time2 {
+    background-color: #22131a;
+    transition: background-color 1s;
+}
