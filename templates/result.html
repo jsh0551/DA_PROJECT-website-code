@@ -28,37 +28,13 @@
     <link rel="stylesheet" href="{% static 'main.css' %}?after">
     <link rel="stylesheet" href="{% static 'qna.css' %}?after">
     <link rel="stylesheet" href="{% static 'animation.css' %}?after">
-    <link rel="stylesheet" href="{% static 'result.css' %}?after">
     <link rel="stylesheet" href="{% static 'dog.png' %}?after">
 </head>
-<body>
+<body onload="js:redirectResult()">
     
-    <!-- <div class="test_text">haha</div> -->
+    </script>
     <div class="container">
-        <section id="main" class="mx-auto mt-5 py- px-3">   
-            <h1 >나의 하루 탄소 배출량은?</h1>
-            <div class="col-lg-6 col-md-8 col-sm-10 col- mx-auto">
-                <img src="{% static 'cat1.png' %}" alt="mainImage" class="img-fluid">
-            </div>
-            <p>
-                내용 설명 가나다라마바사아자차카타파하
-            </p>
-            <button type="button" class="btn btn-outline-danger mt-3"
-            onclick="js:begin()">
-                시작하기
-            </button>
-        </section>
-
-        <section id="qna">
-            <div class="qbox my-5 py-3 mx-auto">
-
-            </div>
-
-            <div class="abox">
-
-            </div>
-        </section>
-        <section id="result">
+        <section id="result">   
             <h1 >결과</h1>
             <div class="resultname"></div>
 
@@ -77,14 +53,11 @@
             <h1>Django 사용자 입력받기</h1>
             <h2>HTML Form 이용하기</h2>
             <hr>
-            <form id='formId' class='createform'>
-                {% csrf_token %}
-            </form>
 
         </section>
-        <script src="static/js/data.js?after" charset="utf-8"></script>
-        <script src="static/js/start.js?after" charset="utf-8"></script>
-        
     </div>
+
+    <script src="static/js/data.js?after" charset="utf-8"></script>
+    <script src="static/js/start.js?after" charset="utf-8"></script>
 </body>
 </html>
