@@ -25,14 +25,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'main.css' %}?after">
     <link rel="stylesheet" href="{% static 'qna.css' %}?after">
     <link rel="stylesheet" href="{% static 'animation.css' %}?after">
-    <link rel="stylesheet" href="{% static 'dog.png' %}?after">
 </head>
-<body onload="js:redirectResult()">
+<body onload="js:redirectResult('{{ max_value }}','{{ min_value }}')">
     
-    </script>
     <div class="container">
         <section id="result">   
             <h1 >결과</h1>
@@ -40,7 +37,15 @@
 
             <div class="resultlist"></div>
 
-            <div id="resultImg" class="col-lg-6 col-md-8 col-sm-10 col- mx-auto">
+            <div id="resultImg">
+                <div class="content_container mx-auto mt-5 py- px-3">
+                    <div class="img_container" id="best_img"></div>
+                    <div class="caption_container py-3" id="best_cap"></div>
+                </div>
+                <div class="content_container mx-auto mt-5 py- px-3">
+                    <div class="img_container" id="worst_img"></div>
+                    <div class="caption_container py-3" id="worst_cap"></div>
+                </div>
             </div>
             <div class="resultDesc"></div>
             <ul class="AnswerGroup">
@@ -50,10 +55,11 @@
             <button type="button">
                 공유하기
             </button>
-            <h1>Django 사용자 입력받기</h1>
-            <h2>HTML Form 이용하기</h2>
-            <hr>
-
+            <p>{{ transportation }}</p>
+            <p>{{ laundry }}</p>
+            <p>{{ electro }}</p>
+            <p>{{ coffee }}</p>
+            <p>{{ food }}</p>
         </section>
     </div>
 

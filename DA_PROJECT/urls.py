@@ -20,5 +20,5 @@ from project_apps.views import index,createform
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", index, name="index"),
-    path('createform', createform, name='createform'),
+    path('result', createform, name='createform'),
 ]

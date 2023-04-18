@@ -1,7 +1,11 @@
 from django import forms
 
 class StdForm(forms.Form):
-    answer1 = forms.IntegerField()
-    answer2 = forms.IntegerField()
-    answer3 = forms.IntegerField()
-    answer4 = forms.IntegerField()
+    data_list = forms.CharField(max_length=100)
+    transportation = forms.FloatField()
+    laundry = forms.FloatField()
+    electro = forms.FloatField()
+    coffee = forms.FloatField()
+    food = forms.FloatField()
+    max_value = forms.IntegerField()
+    min_value = forms.IntegerField()

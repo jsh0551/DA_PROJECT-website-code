@@ -16,7 +16,71 @@
     width: 100%;
 }
 
-.answerList:hover, .answerList:focus {
+/* .answerList:hover, .answerList:focus {
     background-color: pink;
     color: whitesmoke;
+} */
+.w-btn{
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+	transition:all 0.9s, color 0.3;
+	top: 30px;
+	left: 45%;
+}
+
+.w-btn-indigo{
+    background-color: aliceblue;
+    color: #1e6b7b;
+}
+
+#resultImg {
+    display: flex; /* Flexbox를 사용하여 이미지를 가로로 정렬 */
+    gap: 10px;
+    max-width: 100%; /* 이미지 컨테이너의 최대 너비를 100%로 설정하여 컨테이너가 화면을 넘어가지 않도록 함 */
+}
+
+.container{
+    background-color: white;
+
+}
+
+*{
+    font-family: 'Nanum Pen Script', cursive;
+    /* font-family: 'Gowun Dodum', sans-serif; */
+}
+
+p {
+    font-size: 22px;
+}
+
+.content_container {
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    gap : 50px;
+    width: 550px; /* 원하는 너비 값 */
+    height: 700px; /* 원하는 높이 값 */
+}
+
+.img_container {
+    margin : auto;
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    width: 400px; /* 원하는 너비 값 */
+    height: 200px; /* 원하는 높이 값 */
+}
+
+.caption_container {
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    width: 500px; /* 원하는 너비 값 */
+    height: 300px; /* 원하는 높이 값 */
+    font-size: 1.3em;
 }

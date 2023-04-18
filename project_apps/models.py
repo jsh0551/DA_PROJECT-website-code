@@ -3,10 +3,14 @@ from django.contrib.auth.models import User as U
 # Create your models here.
 
 class User_Answer(models.Model):
-    answer1 = models.IntegerField()
-    answer2 = models.IntegerField()
-    answer3 = models.IntegerField()
-    answer4 = models.IntegerField()
+    data_list = models.CharField(max_length=100)
+    transportation = models.FloatField()
+    laundry = models.FloatField()
+    electro = models.FloatField()
+    coffee = models.FloatField()
+    food = models.FloatField()
+    max_value = models.IntegerField()
+    min_value = models.IntegerField()
     # created_at = models.DateTimeField(auto_now_add=True)
     # updated_at = models.DateTimeField(auto_now=True)
 
