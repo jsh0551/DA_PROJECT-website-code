@@ -81,8 +81,16 @@ WSGI_APPLICATION = 'DA_PROJECT.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'app_db',
+        'USER' : 'root',
+        'PASSWORD' : 'bistudy',
+        'HOST' : '34.64.127.115',
+        'PORT' : 3306,
+        'OPTIONS' : {
+            "autocommit" : True,
+            "charset" : "utf8mb4"
+        }
     }
 }
 

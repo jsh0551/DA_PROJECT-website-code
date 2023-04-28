@@ -1,17 +1,28 @@
+html,body{
+    height: 100%;
+}
+
+
 #main{
-    background-color: whitesmoke;
-    width: 80%;
-    height: 800px;
+    background-color: rgb(202, 172, 222);
+    width: 95%;
+    height: auto;
     text-align: center;
+    border-radius: 20px;
 }
 
 *{
-    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'Gowun Batang', serif;
     /* font-family: 'Gowun Dodum', sans-serif; */
 }
 
 p {
     font-size: 22px;
+}
+
+.container{
+    width:100%;
+    height: 100%;
 }
 
 .container.type_1{
@@ -20,6 +31,7 @@ p {
     background: -webkit-linear-gradient(0deg, rgba(173,190,189,0.7736344537815126) 0%, rgba(203,205,171,1) 0%, rgba(209,172,217,0.8464635854341737) 31%, rgba(133,169,204,0.8800770308123249) 100%);
     background: linear-gradient(0deg, rgba(173,190,189,0.7736344537815126) 0%, rgba(203,205,171,1) 0%, rgba(209,172,217,0.8464635854341737) 31%, rgba(133,169,204,0.8800770308123249) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#adbebd",endColorstr="#85a9cc",GradientType=1);
+    /* height:auto; */
 }
 
 .container.type_2{

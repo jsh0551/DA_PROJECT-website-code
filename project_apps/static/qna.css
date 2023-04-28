@@ -1,11 +1,19 @@
 #qna {
     display: none;
-    height: 800px;
+    width: 95%;
+    height: auto;
+    text-align: center;
+}
+
+#result{
+    width: 95%;
 }
 
 .qbox {
     background-color: whitesmoke;
     text-align: center;
+    font-size: large;
+    font-weight: bold;
     border-radius: 20px;
     font-size: 20px;
 }
@@ -24,15 +32,15 @@
     position: relative;
     border: none;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 10px 20px;
     border-radius: 15px;
     font-family: "paybooc-Light", sans-serif;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); */
     text-decoration: none;
     font-weight: 600;
 	transition:all 0.9s, color 0.3;
-	top: 30px;
-	left: 45%;
+	/* top: 30px; */
+    /* margin : 0 auto; */
 }
 
 .w-btn-indigo{
@@ -41,10 +49,15 @@
 }
 
 #resultImg {
-    display: flex; /* Flexbox를 사용하여 이미지를 가로로 정렬 */
-    gap: 10px;
-    max-width: 100%; /* 이미지 컨테이너의 최대 너비를 100%로 설정하여 컨테이너가 화면을 넘어가지 않도록 함 */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    /* gap: 10px;
+    max-width: 100%; 이미지 컨테이너의 최대 너비를 100%로 설정하여 컨테이너가 화면을 넘어가지 않도록 함 */
 }
+
 
 .container{
     background-color: white;
@@ -52,7 +65,7 @@
 }
 
 *{
-    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'Gowun Batang', serif;
     /* font-family: 'Gowun Dodum', sans-serif; */
 }
 
@@ -61,26 +74,49 @@ p {
 }
 
 .content_container {
-    justify-content: center; /* 가로 방향 중앙 정렬 */
-    align-items: center; /* 세로 방향 중앙 정렬 */
-    gap : 50px;
-    width: 550px; /* 원하는 너비 값 */
-    height: 700px; /* 원하는 높이 값 */
+    flex-grow: 1;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #DFC7DC;
+    max-width: 50%; /* 원하는 너비 값 */
+    height: auto; /* 원하는 높이 값 */
 }
 
 .img_container {
     margin : auto;
-    display: flex; /* Flexbox 사용 */
     justify-content: center; /* 가로 방향 중앙 정렬 */
     align-items: center; /* 세로 방향 중앙 정렬 */
-    width: 400px; /* 원하는 너비 값 */
-    height: 200px; /* 원하는 높이 값 */
+    max-width: 90%; /* 원하는 너비 값 */
+    height: auto; /* 원하는 높이 값 */
+    box-sizing: border-box;
 }
 
 .caption_container {
-    display: flex; /* Flexbox 사용 */
-    justify-content: center; /* 가로 방향 중앙 정렬 */
-    width: 500px; /* 원하는 너비 값 */
-    height: 300px; /* 원하는 높이 값 */
-    font-size: 1.3em;
+    max-width: 100%; /* 원하는 너비 값 */
+    height: auto; /* 원하는 높이 값 */
+    font-size: 1.2em;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.status{
+    height: auto;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.resultGraph{
+    margin: 30px;
+}
+
+.statusBar{
+    height: 100%;
+    border-radius: 20px;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
+    background: #f5f6f6; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+    
 }

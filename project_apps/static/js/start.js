@@ -1,13 +1,13 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector('#result');
-const endpoint = 15;
-const select = new Array(15);
+const endpoint = 17;
+const select = new Array(17);
 select.fill(0);
-select[1] = 1;
-select[2] = 1;
+select[3] = 1;
+select[4] = 1;
 const answer_types = ['transportation','laundry','electro','coffee','food'];
-const select_check = new Array(15);
+const select_check = new Array(17);
 select_check.fill(null);
 const score_list = [0,0,0,0,0,0];
 
@@ -35,7 +35,7 @@ function addAnswer(answerText, q_idx, idx){
   var a = document.querySelector('.abox');
   a.classList.add('answerList');
   a.style.borderRadius = '20px';
-  a.style.height = '60%';
+
 
   radio_text = qnaList[q_idx].a[idx].answer;
   radio_value = idx;
@@ -47,6 +47,7 @@ function addAnswer(answerText, q_idx, idx){
   container.appendChild(radio1);
   a.appendChild(container);
   var r = document.querySelector('[name="' + radio_text + '"]');
+  // var r = document.querySelector('.radio');
 
   r.addEventListener("click",function(event){
     if (select_check[q_idx] !== null) {
@@ -61,35 +62,32 @@ function addAnswer(answerText, q_idx, idx){
 
 
 function goNext(q_idx){
-  console.log(select)
-  console.log(q_idx)
-  // console.log(qnaList[q_idx].a[select[q_idx]]['score'])
-  if (q_idx==0){
+  if (q_idx==2){
     document.querySelector('.container').classList.add('type_1');
   }
-  else if (q_idx<=2){
+  else if (q_idx<=4){
     document.querySelector('.container').classList.add('type_2');
   }
-  else if (q_idx<=5){
+  else if (q_idx<=7){
     document.querySelector('.container').classList.add('type_3');
   }
-  else if (q_idx<=9){
+  else if (q_idx<=11){
     document.querySelector('.container').classList.add('type_4');
   }
-  else if (q_idx<=12){
+  else if (q_idx<=14){
     document.querySelector('.container').classList.add('type_5');
   }
-  else if (q_idx<=14){
+  else if (q_idx<=16){
     document.querySelector('.container').classList.add('type_6');
   }
   else if (q_idx>=endpoint){
     console.log(select[0])
     score_list[0] = select.toString();
-    score_list[1] = select[0] * select[1] * select[2];
-    score_list[2] = select[10] + select[11] + select[12];
-    score_list[3] = select[3] + select[8] + select[13] + select[14];
-    score_list[4] = select[4] + select[5];
-    score_list[5] = select[6] + select[7] + select[9];
+    score_list[1] = select[2] * select[3] * select[4];
+    score_list[2] = select[12] + select[13] + select[14];
+    score_list[3] = select[5] + select[10] + select[15] + select[16];
+    score_list[4] = select[6] + select[7];
+    score_list[5] = select[8] + select[9] + select[10];
 
     sessionStorage.setItem("copyed_all", score_list.slice(0,1));
     sessionStorage.setItem("copyed", score_list.slice(1,6));
@@ -102,10 +100,11 @@ function goNext(q_idx){
   for(let i=0; i<qnaList[q_idx].a.length; i++){
     addAnswer(qnaList[q_idx].a[i].answer, q_idx, i);
   }
-  var a = document.querySelector('#qna');
+  var a = document.querySelector('.btn_box');
   var sub_btn = document.createElement('input');
   sub_btn.classList.add('w-btn');
   sub_btn.classList.add('w-btn-indigo');
+  sub_btn.classList.add('mx-auto');
   sub_btn.type = 'button';
   sub_btn.value = 'next';
   a.appendChild(sub_btn);
@@ -122,29 +121,32 @@ function goNext(q_idx){
       setTimeout(() => {
         idx = select[q_idx]-1;
 
-        if (q_idx==0){
-          if (idx==1){goNext(1);}
-          else {goNext(2)};
+        if (q_idx==2){
+          if (idx==1){goNext(3);}
+          else {goNext(4)};
         }
-        else if (q_idx==1){
-          goNext(3);
-        }
-        else if (q_idx==4){
-          if (idx==0){goNext(6);}
-          else {goNext(5)};
+        else if (q_idx==3){
+          goNext(5);
         }
         else if (q_idx==6){
-          if (idx==0){goNext(7);}
-          else if (idx==2){goNext(8);}
-          else {goNext(9)};
+          if (idx==0){goNext(8);}
+          else {goNext(7)};
         }
-        else if (q_idx==7){
-          goNext(9);
+        else if (q_idx==8){
+          if (idx==0){goNext(9);}
+          else if (idx==2){goNext(10);}
+          else {goNext(11)};
+        }
+        else if (q_idx==9){
+          goNext(11);
         }
         else {goNext(++q_idx);}
       },450)
     }
   },false);
+
+  var status = document.querySelector('.statusBar');
+  status.style.width = (100/endpoint)*(q_idx+1)+'%';
 }
 
 function calResult_max(){
@@ -183,6 +185,15 @@ function setResult(max_value,min_value){
   imgDiv2.appendChild(Img2);
   imgCap2.innerHTML = resultList[min_value]['worst_text'];
 
+  const imgDiv3 = document.querySelector('#graph');
+  var Img3 = document.createElement('img');
+  var imgURL3 = "./static/" + String(max_value) + String(min_value) + ".png";
+  Img3.src = imgURL3;
+  Img3.alt = String(max_value) + String(min_value) + ".png";
+  Img3.style.maxHeight = "100%";
+  Img3.style.width = "auto";
+  Img3.classList.add('img-fluid');
+  imgDiv3.appendChild(Img3);
 }
 
 function post_data(d_type,name,id,value){
@@ -196,8 +207,7 @@ function post_data(d_type,name,id,value){
 
 function result_post(){
   const postform = document.querySelector('.createform');
-  var sever_ip = window.location.hostname;
-  postform.action = "http://"+sever_ip+":8000/result"
+  postform.action = "http://127.0.0.1:8000/result"
   postform.method = 'POST'
 
   var list_data_copyed = sessionStorage.getItem("copyed_all");

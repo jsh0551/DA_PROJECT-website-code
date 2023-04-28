@@ -3,12 +3,11 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="DA_team">
     <meta name="keywords" content="탄소배출">
     <meta name="description" content="탄소배출">
-
 
     <meta property="og:url" content="" />
     <meta property="og:title" content="탄소배출" />
@@ -24,59 +23,52 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'icon.png' %}?">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'main.css' %}?after">
     <link rel="stylesheet" href="{% static 'qna.css' %}?after">
     <link rel="stylesheet" href="{% static 'animation.css' %}?after">
-    <link rel="stylesheet" href="{% static 'result.css' %}?after">
-    <link rel="stylesheet" href="{% static 'schedule_9.png' %}?after">
+    <link rel="stylesheet" href="{% static 'water_bear.png' %}?after">
+    <link rel="stylesheet" href="{% static 'title-purple_top.png' %}?after">
+    <link rel="stylesheet" href="{% static 'result_title.png' %}?after">
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
+  integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+ 
 </head>
 <body>
     
     <!-- <div class="test_text">haha</div> -->
-    <div class="container">
-        <section id="main" class="mx-auto mt-5 py- px-3">   
-            <h1 >하루 패턴으로 파악한 나의 환경 캐릭터는?</h1>
-            <h3>
-                <오늘의 일정>
-            </h3>
-            <div class="col-lg-10 col-md-8 col-sm-10 col- mx-auto">
-                <img src="{% static 'schedule_9.png' %}" alt="mainImage" class="img-fluid">
+    <div class="container" style="background-color: rgb(202, 172, 222);">
+        <section id="main" class="mx-auto mt-3 py-5 px-3">   
+            <div class="col-lg-6 col-md-8 col-sm-10 col- mx-auto">
+                <img src="{% static 'title-purple_top.png' %}" alt="mainImage" class="img-fluid">
             </div>
+            <div class="col-lg-6 col-md-8 col-sm-10 col- mx-auto">
+                <img src="{% static 'water_bear.png' %}" alt="mainImage" class="img-fluid">
+            </div>
+            <p>         </p>
             <button type="button" class="btn btn-outline-danger mt-3"
             onclick="js:begin()">
                 START
             </button>
         </section>
 
-        <section id="qna">
-            <div class="qbox my-5 py-3 mx-auto">
+        <section id="qna" class="mx-auto py-3">
+            <div class="status mx-auto mt-5 my-5">
+                <div class="statusBar"></div>
+            </div>
+            <div class="qbox py-3 mx-auto">
 
             </div>
 
             <div class="abox">
 
             </div>
+            <div class="btn_box"></div>
         </section>
-        <section id="result">
-            <h1 >결과</h1>
-            <div class="resultname"></div>
 
-            <div class="resultlist"></div>
-
-            <div id="resultImg" class="col-lg-6 col-md-8 col-sm-10 col- mx-auto">
-            </div>
-            <div class="resultDesc"></div>
-            <ul class="AnswerGroup">
-
-            </ul>
-            
-            <button type="button">
-                공유하기
-            </button>
-            <h1>Django 사용자 입력받기</h1>
-            <h2>HTML Form 이용하기</h2>
-            <hr>
+        <section id="result_page" style="display: none;">
             <form id='formId' class='createform'>
                 {% csrf_token %}
             </form>

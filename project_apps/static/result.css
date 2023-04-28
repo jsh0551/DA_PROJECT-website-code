@@ -1,3 +1,8 @@
-#result {
-    display: none;
+
+#result{
+    background-color: rgb(201, 160, 223);
+    width: 95%;
+    height: auto;
+    text-align: center;
+    border-radius: 20px;
 }
