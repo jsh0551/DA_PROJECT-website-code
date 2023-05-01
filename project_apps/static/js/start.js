@@ -84,7 +84,7 @@ function goNext(q_idx){
     document.querySelector('.container').classList.add('type_6');
   }
   else if (q_idx>=endpoint){
-    score_list[0] = select_score.toString();
+    score_list[0] = select.toString();
     score_list[1] = select_score[0];
     score_list[2] = select_score[1];
     score_list[3] = select_score[2] * select_score[3] * select_score[4];
