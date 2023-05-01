@@ -3,6 +3,7 @@ from django.contrib.auth.models import User as U
 # Create your models here.
 
 class User_Answer(models.Model):
+    user = models.CharField(max_length=20)
     data_list = models.CharField(max_length=100)
     gender = models.IntegerField()
     age = models.IntegerField()
@@ -17,11 +18,11 @@ class User_Answer(models.Model):
     # updated_at = models.DateTimeField(auto_now=True)
 
 
-class UserDetail(models.Model):
-    user = models.OneToOneField(U, on_delete=models.CASCADE)
-    pay_plan = models.ForeignKey(User_Answer, on_delete=models.DO_NOTHING)
+# class UserDetail(models.Model):
+#     user = models.OneToOneField(U, on_delete=models.CASCADE)
+#     pay_plan = models.ForeignKey(User_Answer, on_delete=models.DO_NOTHING)
 
-class Student(models.Model):
-    studentID = models.IntegerField()
-    name = models.CharField(max_length=30)
-    major = models.CharField(max_length=100)
+# class Student(models.Model):
+#     studentID = models.IntegerField()
+#     name = models.CharField(max_length=30)
+#     major = models.CharField(max_length=100)
