@@ -4,6 +4,8 @@ from django.contrib.auth.models import User as U
 
 class User_Answer(models.Model):
     data_list = models.CharField(max_length=100)
+    gender = models.IntegerField()
+    age = models.IntegerField()
     transportation = models.FloatField()
     laundry = models.FloatField()
     electro = models.FloatField()

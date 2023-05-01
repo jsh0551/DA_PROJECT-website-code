@@ -60,13 +60,13 @@
 
 
 .container{
-    background-color: white;
-
+    /* background-color: white; */
+    background-color: rgb(201, 160, 223);
 }
 
-
-/* *{
-    font-family: 'Gowun Batang', serif;
+/* 
+*{
+    font-family: 'Gowun Batang', sans-serif;
 } */
 
 .char_title{
@@ -84,6 +84,7 @@ p {
     box-sizing: border-box;
     border-radius: 15px;
     background-color: #DFC7DC;
+    /* background-color: rgb(201, 160, 223); */
     max-width: 90%; /* 원하는 너비 값 */
     height: auto; /* 원하는 높이 값 */
 }

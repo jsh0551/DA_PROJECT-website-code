@@ -39,17 +39,18 @@
     
     <div class="container mx-auto" style="background-color: rgb(201, 160, 223);align-items: center;justify-content: center;display: flex;">
         <section id="result" style="background-color: rgb(201, 160, 223);">   
-            <div class="col-lg-6 col-md-8 col-sm-10 col- py-3 mx-auto">
+            <div class="col-lg-6 col-md-8 col-sm-10 col- py-1 mx-auto">
                 <img src="{% static 'result_title.png' %}" alt="mainImage" class="img-fluid">
             </div>
-            <div class="sub_container" style="border-radius: 15px; background-color: #DFC7DC;">
+            <div class="sub_container" style="border-radius: 15px; background-color: rgb(201, 160, 223);">
                 <div id="resultImg">
-                    <div class="content_container col-lg-6 col-md-8 col-sm-10 col- mx-auto mt-5 py- px-3">
+                    <div class="content_container col-lg-6 col-md-8 col-sm-10 col- mx-auto mt-3 py- px-3">
                         <div class="char_title"><h1>&lt; Good 😇&gt;</h1></div>
                         <div class="img_container" id="best_img"></div>
                         <div class="caption_container py-3" id="best_cap"></div>
                     </div>
-                    <div class="content_container col-lg-6 col-md-8 col-sm-10 col- mx-auto mt-5 py- px-3">
+                    <div class="content_container col-lg-6 col-md-8 col-sm-10 col- mx-auto mt-3 py- px-3">
+                        <div class="char_title"><h1>&lt; Bad 😞&gt;</h1></div>
                         <div class="img_container" id="worst_img"></div>
                         <div class="caption_container py-3" id="worst_cap"></div>
                     </div>
@@ -83,30 +84,30 @@
                     description: '#성격테스트 #지구온난화 #탄소배출 #탄소발자국',
                     imageUrl: "{% static 'water_bear.png' %}",
                     link: {
-                        mobileWebUrl: 'http://evni-test.r-e.kr',
-                        webUrl: 'http://evni-test.r-e.kr'
+                        mobileWebUrl: 'http://env-test.r-e.kr',
+                        webUrl: 'http://env-test.r-e.kr'
                     }
                     },
                     buttons: [
                     {
                         title: '웹으로 보기',
                         link: {
-                        mobileWebUrl: 'http://evni-test.r-e.kr',
-                        webUrl: 'http://evni-test.r-e.kr'
+                        mobileWebUrl: 'http://env-test.r-e.kr',
+                        webUrl: 'http://env-test.r-e.kr'
                         }
                     },
                     {
                         title: '앱으로 보기',
                         link: {
-                        mobileWebUrl: 'http://evni-test.r-e.kr',
-                        webUrl: 'http://evni-test.r-e.kr'
+                        mobileWebUrl: 'http://env-test.r-e.kr',
+                        webUrl: 'http://env-test.r-e.kr'
                         }
                     }
                     ]
                 });
             </script>
 
-            <button class="replay w-btn w-btn-indigo py-3" type="button" style="bottom:10px;" onclick="location.href='http://evni-test.r-e.kr'">
+            <button class="replay w-btn w-btn-indigo py-3" type="button" style="bottom:10px;" onclick="location.href='http://env-test.r-e.kr'">
                 다시하기
             </button>
         </section>
