@@ -26,6 +26,7 @@ def createform(request):
     # print('---------------------------------',request.POST,request.method)
     if request.method == 'POST':
         ans = User_Answer()
+        ans.user = request.POST['csrfmiddlewaretoken'][:20]
         ans.data_list = request.POST['data_list']
         ans.gender = request.POST['gender']
         ans.age = request.POST['age']

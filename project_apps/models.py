@@ -3,6 +3,7 @@ from django.contrib.auth.models import User as U
 # Create your models here.
 
 class User_Answer(models.Model):
+    user = models.CharField(max_length=20)
     data_list = models.CharField(max_length=100)
     gender = models.IntegerField()
     age = models.IntegerField()
