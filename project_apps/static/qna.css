@@ -49,9 +49,9 @@
 }
 
 #resultImg {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: flex-start; */
     justify-content: center;
     text-align: center;
     /* gap: 10px;
@@ -64,9 +64,15 @@
 
 }
 
-*{
+
+/* *{
     font-family: 'Gowun Batang', serif;
-    /* font-family: 'Gowun Dodum', sans-serif; */
+} */
+
+.char_title{
+    /* font-family: 'Roboto', cursive; */
+    /* font-family: 'Quicksand', cursive; */
+    font-family: 'Darumadrop One', cursive;
 }
 
 p {
@@ -78,7 +84,7 @@ p {
     box-sizing: border-box;
     border-radius: 15px;
     background-color: #DFC7DC;
-    max-width: 50%; /* 원하는 너비 값 */
+    max-width: 90%; /* 원하는 너비 값 */
     height: auto; /* 원하는 높이 값 */
 }
 
@@ -92,6 +98,7 @@ p {
 }
 
 .caption_container {
+    font-family: 'Gowun Batang', serif;
     max-width: 100%; /* 원하는 너비 값 */
     height: auto; /* 원하는 높이 값 */
     font-size: 1.2em;

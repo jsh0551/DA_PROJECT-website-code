@@ -42,7 +42,7 @@ def createform(request):
                     'electro':ans.electro,'coffee':ans.coffee,'food':ans.food,
                     'max_value':ans.max_value, 'min_value':ans.min_value})
     else:
-        return redirect("http://127.0.0.1:8000")
+        return redirect("http://34.64.219.147")
     # return redirect('createform')
 
     # return JsonResponse(dict(msg="You just reached with Post Method!"))

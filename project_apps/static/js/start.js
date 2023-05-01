@@ -207,7 +207,7 @@ function post_data(d_type,name,id,value){
 
 function result_post(){
   const postform = document.querySelector('.createform');
-  postform.action = "http://127.0.0.1:8000/result"
+  postform.action = "http://34.64.219.147/result"
   postform.method = 'POST'
 
   var list_data_copyed = sessionStorage.getItem("copyed_all");
