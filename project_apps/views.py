@@ -8,10 +8,8 @@ from django.http.response import JsonResponse
 
 # @csrf_exempt
 def index(request):
-    print('done')
     # print(request)
     if request.method == 'POST':
-        print('-------------------------post')
         answers = User_Answer(request.POST)
         answers.test_text = 'test'
         answers.save()
@@ -25,10 +23,9 @@ def index(request):
 @csrf_exempt
 def createform(request):
     
-    print('---------------------------------',request.POST,request.method)
+    # print('---------------------------------',request.POST,request.method)
     if request.method == 'POST':
         ans = User_Answer()
-        ans.user = request.POST['csrfmiddlewaretoken'][:20]
         ans.data_list = request.POST['data_list']
         ans.gender = request.POST['gender']
         ans.age = request.POST['age']
