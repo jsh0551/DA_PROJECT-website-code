@@ -4,8 +4,10 @@ const result = document.querySelector('#result');
 const endpoint = 17;
 const select = new Array(17);
 select.fill(0);
-select[3] = 1;
-select[4] = 1;
+const select_score = new Array(17);
+select_score.fill(0);
+select_score[3] = 1;
+select_score[4] = 1;
 const answer_types = ['gender','age','transportation','laundry','electro','coffee','food'];
 const select_check = new Array(17);
 select_check.fill(null);
@@ -56,7 +58,8 @@ function addAnswer(answerText, q_idx, idx){
     event.target.checked = true;
     select_check[q_idx] = event.target;
 
-    select[q_idx] = qnaList[q_idx].a[idx]['score'];
+    select[q_idx] = idx+1;
+    select_score[q_idx] = qnaList[q_idx].a[idx]['score'];
   },false);
 }
 
@@ -81,14 +84,14 @@ function goNext(q_idx){
     document.querySelector('.container').classList.add('type_6');
   }
   else if (q_idx>=endpoint){
-    score_list[0] = select.toString();
-    score_list[1] = select[0];
-    score_list[2] = select[1];
-    score_list[3] = select[2] * select[3] * select[4];
-    score_list[4] = select[12] + select[13] + select[14];
-    score_list[5] = select[5] + select[10] + select[15] + select[16];
-    score_list[6] = select[6] + select[7];
-    score_list[7] = select[8] + select[9] + select[10];
+    score_list[0] = select_score.toString();
+    score_list[1] = select_score[0];
+    score_list[2] = select_score[1];
+    score_list[3] = select_score[2] * select_score[3] * select_score[4];
+    score_list[4] = select_score[12] + select_score[13] + select_score[14];
+    score_list[5] = select_score[5] + select_score[10] + select_score[15] + select_score[16];
+    score_list[6] = select_score[6] + select_score[7];
+    score_list[7] = select_score[8] + select_score[9] + select_score[10];
 
     sessionStorage.setItem("copyed_all", score_list.slice(0,1));
     sessionStorage.setItem("copyed", score_list.slice(1,8));
