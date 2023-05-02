@@ -12,6 +12,8 @@ const answer_types = ['gender','age','transportation','laundry','electro','coffe
 const select_check = new Array(17);
 select_check.fill(null);
 const score_list = [0,0,0,0,0,0,0,0];
+const time_list = ['[8:00 AM]','[12:00 PM]','[1:00 PM]','[6:00 PM]','[8:00 PM]','[9:00 PM]']
+
 
 function createRadioElement(name, value, text) {
   // input 태그 생성
@@ -65,22 +67,39 @@ function addAnswer(answerText, q_idx, idx){
 
 
 function goNext(q_idx){
-  if (q_idx==2){
+  if (q_idx<=1){
+    header = document.querySelector('#header_time');
+    header.innerHTML = ''
+    document.querySelector('.container').classList.add('type_1');
+  }
+  else if (q_idx<=2){
+    header = document.querySelector('#header_time');
+    header.innerHTML = time_list[0]
     document.querySelector('.container').classList.add('type_1');
   }
   else if (q_idx<=4){
+    header = document.querySelector('#header_time');
+    header.innerHTML = time_list[1]
     document.querySelector('.container').classList.add('type_2');
   }
   else if (q_idx<=7){
+    header = document.querySelector('#header_time');
+    header.innerHTML = time_list[2]
     document.querySelector('.container').classList.add('type_3');
   }
   else if (q_idx<=11){
+    header = document.querySelector('#header_time');
+    header.innerHTML = time_list[3]
     document.querySelector('.container').classList.add('type_4');
   }
   else if (q_idx<=14){
+    header = document.querySelector('#header_time');
+    header.innerHTML = time_list[4]
     document.querySelector('.container').classList.add('type_5');
   }
   else if (q_idx<=16){
+    header = document.querySelector('#header_time');
+    header.innerHTML = time_list[5]
     document.querySelector('.container').classList.add('type_6');
   }
   else if (q_idx>=endpoint){

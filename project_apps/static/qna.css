@@ -24,10 +24,19 @@
     width: 100%;
 }
 
-/* .answerList:hover, .answerList:focus {
-    background-color: pink;
-    color: whitesmoke;
-} */
+
+header {
+    background-color: rgba(74, 104, 170, 0);
+    color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+
 .w-btn{
     position: relative;
     border: none;
