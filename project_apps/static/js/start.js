@@ -151,6 +151,7 @@ function goNext(q_idx){
 
   var status = document.querySelector('.statusBar');
   status.style.width = (100/endpoint)*(q_idx+1)+'%';
+  status.style.height = '100%';
 }
 
 function calResult_max(){
