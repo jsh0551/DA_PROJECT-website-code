@@ -35,6 +35,14 @@
     <link rel="stylesheet" href="{% static 'qna.css' %}?after">
     <link rel="stylesheet" href="{% static 'animation.css' %}?after">
     <link rel="stylesheet" href="{% static 'result.css' %}?after">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFXMD2G6EL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-PFXMD2G6EL');
+      </script>
 </head>
 <body onload="js:redirectResult('{{ max_value }}','{{ min_value }}')">
     <div class="container mx-auto" style="background-color: rgb(201, 160, 223);align-items: center;justify-content: center;display: flex;">
