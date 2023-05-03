@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from project_apps.views import index,createform
+from project_apps.views import index,createform,share_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", index, name="index"),
     path('result', createform, name='createform'),
+    path('share/<str:result_num>',share_page,name='share_page')
 ]

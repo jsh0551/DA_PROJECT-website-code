@@ -321,7 +321,6 @@ const resultList = [
     {worst : 'trans_high',
     best : 'trans_low',
     worst_text : '우리 액히, <span style="color:#DF6D5A;font-weight: bold;">스모커</span> 옵하가 차 태워줄게~ 오빠가 맨날 타고 다니는 애마야<br>'
-    +'( ͡° ͜ʖ ͡°)<br><br>'
     +'드라이브하다 들었는데 1km 당 약 150g의 이산화탄소가 배출된다더라? 연간 사용하면 2,000Kg!?<br><br>'
     +'2,000kg의 무게를 짊어진 오빠랑 드라이브 어때 베이비? 액히도 오빠랑 같은 타입인 줄 알았는데 오늘은 대중교통 이용한다고?!',
     best_text : '안녕! 나는 활동적인 <span style="color:#3A66DF;font-weight: bold;">워커</span>야!<br>'

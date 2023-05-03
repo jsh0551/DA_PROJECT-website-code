@@ -46,3 +46,5 @@ def createform(request):
         return redirect("http://env-test.r-e.kr")
         # return redirect("http://127.0.0.1:8000")
 
+def share_page(request,result_num):
+    return render(request, f"{result_num}.html")

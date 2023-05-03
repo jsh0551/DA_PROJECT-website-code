@@ -27,11 +27,11 @@ function createRadioElement(name, value, text) {
   div.innerHTML = radioHtml + labelHtml;
   
   div.classList.add('answerList');
-  div.classList.add('my-2');
-  div.classList.add('py-3');
+  div.classList.add('my-1');
+  div.classList.add('py-2');
   div.classList.add('mx-auto');
   div.style.width = '80%';
-  div.style.fontSize = '18px';
+  div.style.fontSize = '14px';
   return div;
 }
 
@@ -129,7 +129,7 @@ function goNext(q_idx){
   sub_btn.classList.add('w-btn-indigo');
   sub_btn.classList.add('mx-auto');
   sub_btn.type = 'button';
-  sub_btn.value = 'next';
+  sub_btn.value = 'Next';
   a.appendChild(sub_btn);
 
   sub_btn.addEventListener("click",function(){

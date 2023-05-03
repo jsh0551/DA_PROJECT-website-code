@@ -44,8 +44,8 @@
         gtag('config', 'G-PFXMD2G6EL');
       </script>
 </head>
-<body onload="js:redirectResult('{{ max_value }}','{{ min_value }}')">
-    <div class="container mx-auto" style="background-color: rgb(201, 160, 223);align-items: center;justify-content: center;display: flex;">
+<body>
+    <div class="container mx-auto" style="background-color: rgb(201, 160, 223);align-items: center;justify-content: center;display: flex; font-size: 14px;">
         <section id="result" style="background-color: rgb(201, 160, 223);">   
             <div class="col-lg-6 col-md-8 col-sm-10 col- py-1 mx-auto">
                 <img src="{% static 'result_title.png' %}" alt="mainImage" class="img-fluid">
@@ -63,61 +63,52 @@
                         <div class="caption_container py-3" id="worst_cap"></div>
                     </div>
                 </div>
-                <!-- <div id="resultImg">
-                    <div class="content_container col-lg-6 col-md-8 col-sm-10 col- mx-auto mt-5 py- px-3">
-                        <div class="caption_container py-3" id="best_cap"></div>
-                    </div>
-                    <div class="content_container col-lg-6 col-md-8 col-sm-10 col- mx-auto mt-5 py- px-3">
-                        <div class="caption_container py-3" id="worst_cap"></div>
-                    </div>
-                </div> -->
+
             </div>
             <div class="resultGraph col-lg-6 col-md-8 col-sm-10 col- mx-auto py-3" style="background-color: white; border-radius: 20px; width : 80%; align-items: center; flex-direction: column;">
                 <div class="img_container" id="graph"></div>
             </div>
-            <ul class="AnswerGroup">
-
-            </ul>
-            
-            <button class="share_btn w-btn w-btn-indigo py-3" id="kakao-link-btn" type="button" style="bottom:10px;">
-                공유하기
-            </button>
-            <script type='text/javascript'>
-                var result_num = "{{max_value}}"+"{{min_value}}";
-                Kakao.init('d3bebf78457bbfb76a401cbbe07ac80f');
-                Kakao.Link.createDefaultButton({
-                    container: '.share_btn',
-                    objectType: 'feed',
-                    content: {
-                    title: '환경 유형 테스트',
-                    description: '#성격테스트 #지구온난화 #탄소배출 #탄소발자국',
-                    imageUrl: "https://i.ibb.co/m4HqYG2/water-bear.png",
-                    link: {
-                        mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
-                        webUrl: 'http://env-test.r-e.kr/share/'+result_num
-                    }
-                    },
-                    buttons: [
-                    {
-                        title: '웹으로 보기',
-                        link: {
-                        mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
-                        webUrl: 'http://env-test.r-e.kr/share/'+result_num
-                        }
-                    },
-                    {
-                        title: '앱으로 보기',
-                        link: {
-                        mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
-                        webUrl: 'http://env-test.r-e.kr/share/'+result_num
-                        }
-                    }
-                    ]
-                });
+            <script src="{% static 'js/data.js' %}" charset="utf-8"></script>
+            <script>
+                var max_value = 3;
+                var min_value = 2;
+                const imgDiv1 = document.querySelector('#best_img');
+                const imgCap1 = document.querySelector('#best_cap');
+                var Img1 = document.createElement('img');
+                var imgURL1 = "{% static 'coffee_low.png' %}";
+                Img1.src = imgURL1;
+                Img1.alt = resultList[max_value]['best'];
+                Img1.style.maxHeight = "100%";
+                Img1.style.width = "auto";
+                Img1.classList.add('img-fluid');
+                imgDiv1.appendChild(Img1);
+                imgCap1.innerHTML = resultList[max_value]['best_text'];
+                
+                const imgDiv2 = document.querySelector('#worst_img');
+                const imgCap2 = document.querySelector('#worst_cap');
+                var Img2 = document.createElement('img');
+                var imgURL2 = "{% static 'elec_high.png' %}";
+                Img2.src = imgURL2;
+                Img2.alt = resultList[min_value]['worst'];
+                Img2.style.maxHeight = "100%";
+                Img2.style.width = "auto";
+                Img2.classList.add('img-fluid');
+                imgDiv2.appendChild(Img2);
+                imgCap2.innerHTML = resultList[min_value]['worst_text'];
+    
+                const imgDiv3 = document.querySelector('#graph');
+                var Img3 = document.createElement('img');
+                var imgURL3 = "{% static '32.png' %}";
+                Img3.src = imgURL3;
+                Img3.alt = String(max_value) + String(min_value) + ".png";
+                Img3.style.maxHeight = "100%";
+                Img3.style.width = "auto";
+                Img3.classList.add('img-fluid');
+                imgDiv3.appendChild(Img3);
             </script>
 
             <button class="replay w-btn w-btn-indigo py-3" type="button" style="bottom:10px;" onclick="location.href='http://env-test.r-e.kr'">
-                다시하기
+                테스트 시작
             </button>
         </section>
     </div>
