@@ -6,15 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="DA_team">
-    <meta name="keywords" content="탄소배출">
-    <meta name="description" content="탄소배출">
+    <meta name="keywords" content="나의 환경 테스트">
+    <meta name="description" content="나의 환경 테스트">
 
+    <meta name='twitter:title', content= '나의 환경 테스트'/>
+    <meta name='twitter:description', content= '생활속 탄소배출로 알아보는 나의 캐릭터'/>
+    <meta name='twitter:card', content= 'summary'/>
+    <meta name='twitter:url', content= 'http://env-test.r-e.kr'/>
+    <meta name='twitter:image', content= 'http://env-test.r-e.kr/static/water_bear.png'/>
 
-    <meta property="og:url" content="" />
-    <meta property="og:title" content="탄소배출" />
+    <meta property="og:url" content="http://env-test.r-e.kr" />
+    <meta property="og:title" content="나의 환경 테스트" />
     <meta property="og:type" content="website" />
-    <!-- <meta property="og:image" content="" /> -->
-    <meta property="og:description" content="탄소배출" />
+    <meta property="og:image" content="http://env-test.r-e.kr/static/water_bear.png" />
+    <meta property="og:description" content="나의 환경 테스트" />
     
     <!-- icon -> icon-icons.com -->
     <!-- <link rel="shortcut icon" href=""> -->
@@ -78,15 +83,58 @@
             <ul class="AnswerGroup">
 
             </ul>
-            
-            <button class="share_btn w-btn w-btn-indigo py-3" id="kakao-link-btn" type="button" style="bottom:10px;">
-                공유하기
+
+            <button class="replay w-btn w-btn-indigo py-3" type="button" style="bottom:10px;" onclick="location.href='http://env-test.r-e.kr'">
+                다시하기
             </button>
+            
+            <div class="share_text my-3" style="font-size:20px; align-items: center;font-family: 'Gowun Dodum', sans-serif;">공유하기</div>
+            <div class="share_btn mx-auto my-3">
+                <a id="btnKakao" class="share_kakao" href="#n" onclick="javascript:shareKakao();return false;"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/5f9c58c2017800001.png" style="width:40px;height:40px;border-radius: 15px;"></a>
+                <a id="btnTwitter" class="share_twitter" href="#n" onclick="javascript:shareTwitter();return false;"><img src="https://blog.kakaocdn.net/dn/AcIGI/btqxtp2xkg2/EGABG3i2NAMq3kRu1VaGzk/img.jpg" style="width:40px;height:40px;border-radius: 15px;"></a>
+                <a id="btnFacebook" class="share_facebook" href="#n" onclick="javascript:shareFacebook();return false;"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536394.png" style="width:40px;height:40px;border-radius: 15px;"></a>
+                </div>
+            <!-- <button class="share_btn w-btn w-btn-indigo py-3" id="kakao-link-btn" type="button" style="bottom:10px;">
+                공유하기
+            </button> -->
             <script type='text/javascript'>
                 var result_num = "{{max_value}}"+"{{min_value}}";
+                // Kakao.init('d3bebf78457bbfb76a401cbbe07ac80f');
+                // Kakao.Link.createDefaultButton({
+                //     container: '#btnKakao',
+                //     objectType: 'feed',
+                //     content: {
+                //     title: '환경 유형 테스트',
+                //     description: '#성격테스트 #지구온난화 #탄소배출 #탄소발자국',
+                //     imageUrl: "https://i.ibb.co/m4HqYG2/water-bear.png",
+                //     link: {
+                //         mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
+                //         webUrl: 'http://env-test.r-e.kr/share/'+result_num
+                //     }
+                //     },
+                //     buttons: [
+                //     {
+                //         title: '웹으로 보기',
+                //         link: {
+                //         mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
+                //         webUrl: 'http://env-test.r-e.kr/share/'+result_num
+                //         }
+                //     },
+                //     {
+                //         title: '앱으로 보기',
+                //         link: {
+                //         mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
+                //         webUrl: 'http://env-test.r-e.kr/share/'+result_num
+                //         }
+                //     }
+                //     ]
+                // });
+
+                function shareKakao() {           
                 Kakao.init('d3bebf78457bbfb76a401cbbe07ac80f');
+                
                 Kakao.Link.createDefaultButton({
-                    container: '.share_btn',
+                    container: '#btnKakao',
                     objectType: 'feed',
                     content: {
                     title: '환경 유형 테스트',
@@ -114,11 +162,19 @@
                     }
                     ]
                 });
-            </script>
+                    }
 
-            <button class="replay w-btn w-btn-indigo py-3" type="button" style="bottom:10px;" onclick="location.href='http://env-test.r-e.kr'">
-                다시하기
-            </button>
+                function shareTwitter() {
+                var sendText = "env_test";
+                var sendUrl = 'http://env-test.r-e.kr/share/'+result_num;
+                window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);  //Twitter에 전송 정보 파라미터 삽입  
+                    }
+                function shareFacebook() {
+                var sendText = "env_test";
+                var sendUrl = 'http://env-test.r-e.kr/share/'+result_num;
+                window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);  //Twitter에 전송 정보 파라미터 삽입  
+                    }
+            </script>
         </section>
     </div>
 

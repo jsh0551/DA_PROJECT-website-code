@@ -12,7 +12,6 @@
 .qbox {
     background-color: whitesmoke;
     text-align: center;
-    font-size: large;
     font-weight: bold;
     border-radius: 20px;
     font-size: 15px;
@@ -71,6 +70,7 @@ header {
 .container{
     /* background-color: white; */
     background-color: rgb(201, 160, 223);
+    
 }
 
 /* 
@@ -86,6 +86,7 @@ header {
 
 p {
     font-size: 22px;
+    font-family: 'Gowun Dodum', sans-serif;
 }
 
 .content_container {
