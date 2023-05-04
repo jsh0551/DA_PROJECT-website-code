@@ -42,11 +42,29 @@
     <link rel="stylesheet" href="{% static 'result.css' %}?after">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFXMD2G6EL"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        const csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+  
+  // 페이지 뷰 이벤트를 전송할 때 customTask를 사용하여 CSRF 토큰을 무시하도록 설정
+        gtag('event', 'page_view', {
+            'page_title': document.title,
+            'page_path': location.pathname,
+            'send_to': 'G-PFXMD2G6EL',
+            'customTask': function() {
+            // 기존 필드 값을 가져와서 객체로 저장
+            var modelData = arguments[arguments.length - 1].get('modelData');
+            
+            // CSRF 토큰 값을 제거
+            delete modelData['csrfmiddlewaretoken'];
+            
+            // 변경된 필드 값을 설정
+            arguments[arguments.length - 1].set('modelData', modelData);
+            }
+        });
+        // window.dataLayer = window.dataLayer || [];
+        // function gtag(){dataLayer.push(arguments);}
+        // gtag('js', new Date());
       
-        gtag('config', 'G-PFXMD2G6EL');
+        // gtag('config', 'G-PFXMD2G6EL');
       </script>
 </head>
 <body onload="js:redirectResult('{{ max_value }}','{{ min_value }}')">
