@@ -5,6 +5,8 @@ from django.contrib.auth.models import User as U
 class User_Answer(models.Model):
     user = models.CharField(max_length=20)
     data_list = models.CharField(max_length=100)
+    start_time = models.CharField(max_length=20)
+    submit_time = models.CharField(max_length=20)
     gender = models.IntegerField()
     age = models.IntegerField()
     transportation = models.FloatField()

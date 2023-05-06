@@ -13,7 +13,7 @@ const select_check = new Array(17);
 select_check.fill(null);
 const score_list = [0,0,0,0,0,0,0,0];
 const time_list = ['[8:00 AM]','[12:00 PM]','[1:00 PM]','[6:00 PM]','[8:00 PM]','[9:00 PM]']
-
+const time_data = [0,0]
 
 function createRadioElement(name, value, text) {
   // input 태그 생성
@@ -103,6 +103,7 @@ function goNext(q_idx){
     document.querySelector('.container').classList.add('type_6');
   }
   else if (q_idx>=endpoint){
+    time_data[1] = getCurrentDate();
     score_list[0] = select.toString();
     score_list[1] = select_score[0];
     score_list[2] = select_score[1];
@@ -114,6 +115,7 @@ function goNext(q_idx){
 
     sessionStorage.setItem("copyed_all", score_list.slice(0,1));
     sessionStorage.setItem("copyed", score_list.slice(1,8));
+    sessionStorage.setItem("time_data", time_data);
 
     goResult();
     return;
@@ -237,8 +239,13 @@ function result_post(){
 
   var list_data_copyed = sessionStorage.getItem("copyed_all");
   var data_copyed = sessionStorage.getItem("copyed");
+  var time_data_copyed = sessionStorage.getItem("time_data");
   const answer_count_copyed = data_copyed.split(',')
 
+  var start_time = post_data("text",'start_time','start_time',time_data_copyed[0]);
+  postform.appendChild(start_time);
+  var submit_time = post_data("text",'submit_time','submit_time',time_data_copyed[1]);
+  postform.appendChild(submit_time);
   var type_input = post_data("text",'data_list','data_list',list_data_copyed);
   postform.appendChild(type_input);
   for(let i=0; i<answer_types.length; i++){
@@ -278,7 +285,21 @@ function begin(){
       qna.style.display = 'block';
     })
     let q_idx = 0;
+    time_data[0] = getCurrentDate();
     goNext(q_idx);
   })
 
+}
+
+function addZero(n) {
+  return n < 10 ? '0' + n : n;
+}
+
+// 현재 시간을 리턴
+function getCurrentDate(){
+
+  var date = new Date();
+  return date.getFullYear().toString() + addZero(date.getMonth() + 1) + addZero( date.getDate()) 
+
+       + addZero( date.getHours() ) + addZero( date.getMinutes() ) + addZero(date.getSeconds());
 }

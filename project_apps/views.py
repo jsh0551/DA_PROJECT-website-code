@@ -28,6 +28,8 @@ def createform(request):
         ans = User_Answer()
         ans.user = request.POST['csrfmiddlewaretoken'][:20]
         ans.data_list = request.POST['data_list']
+        ans.start_time = request.POST['start_time']
+        ans.submit_time = request.POST['submit_time']
         ans.gender = request.POST['gender']
         ans.age = request.POST['age']
         ans.transportation = request.POST['transportation']
