@@ -239,8 +239,9 @@ function result_post(){
 
   var list_data_copyed = sessionStorage.getItem("copyed_all");
   var data_copyed = sessionStorage.getItem("copyed");
-  var time_data_copyed = sessionStorage.getItem("time_data");
+  var time_data_copyed = sessionStorage.getItem("time_data").split(',');
   const answer_count_copyed = data_copyed.split(',')
+
 
   var start_time = post_data("text",'start_time','start_time',time_data_copyed[0]);
   postform.appendChild(start_time);
