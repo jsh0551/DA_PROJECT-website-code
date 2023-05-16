@@ -111,7 +111,7 @@ function goNext(q_idx){
     score_list[4] = select_score[12] + select_score[13] + select_score[14];
     score_list[5] = select_score[5] + select_score[10] + select_score[15] + select_score[16];
     score_list[6] = select_score[6] + select_score[7];
-    score_list[7] = select_score[8] + select_score[9] + select_score[10];
+    score_list[7] = select_score[8] + select_score[9] + select_score[11];
 
     sessionStorage.setItem("copyed_all", score_list.slice(0,1));
     sessionStorage.setItem("copyed", score_list.slice(1,8));
@@ -148,10 +148,8 @@ function goNext(q_idx){
 
         if (q_idx==2){
           if (idx==1){goNext(3);}
-          else {goNext(4)};
-        }
-        else if (q_idx==3){
-          goNext(5);
+          else if (idx==2){goNext(4);}
+          else {goNext(5)};
         }
         else if (q_idx==6){
           if (idx==0){goNext(8);}

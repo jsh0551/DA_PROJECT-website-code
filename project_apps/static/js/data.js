@@ -115,7 +115,7 @@ const qnaList = [
     a : [
         {
             answer : '마시지 않는다',
-            score : 5.0
+            score : 10.0
         },
         {
             answer : '1잔',
@@ -263,7 +263,7 @@ const qnaList = [
         },
         {
             answer : '자연 건조',
-            score : 2.0
+            score : 4.0
         }
     ]
     },
@@ -275,15 +275,15 @@ const qnaList = [
         },
         {
             answer : '매일 지운다',
-            score : 5.0
-        },
-        {
-            answer : '한 달에 한 번 이상은 지운다',
             score : 3.0
         },
         {
+            answer : '한 달에 한 번 이상은 지운다',
+            score : 1.0
+        },
+        {
             answer : '일 년에 한 번 이상은 지운다',
-            score : 1.5
+            score : 0.5
         }
     ]
     },
@@ -291,19 +291,19 @@ const qnaList = [
     a : [
         {
             answer : '시청하지 않는다',
-            score : 5.0
-        },
-        {
-            answer : '30분 미만',
-            score : 4.0
-        },
-        {
-            answer : '30분에서 1시간 사이 ',
             score : 3.0
         },
         {
-            answer : '1시간에서 2시간 사이 ',
+            answer : '30분 미만',
             score : 2.0
+        },
+        {
+            answer : '30분에서 1시간 사이 ',
+            score : 1.0
+        },
+        {
+            answer : '1시간에서 2시간 사이 ',
+            score : 0.5
         },
         {
             answer : '2시간 이상 ',
