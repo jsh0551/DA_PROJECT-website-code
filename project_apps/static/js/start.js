@@ -180,6 +180,7 @@ function calResult_max(){
 
 function calResult_min(){
   var result = score_list.slice(3,8).indexOf(Math.min(...score_list.slice(3,8)));
+  if (Math.min(...score_list.slice(3,8))==10){result = 1;}
   return result;
 }
 
