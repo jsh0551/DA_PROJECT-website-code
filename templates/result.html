@@ -86,7 +86,8 @@
 
             </ul>
 
-            <button class="replay w-btn w-btn-indigo py-3" type="button" style="bottom:10px;" onclick="location.href='http://env-test.r-e.kr'">
+            <!-- <button class="replay w-btn w-btn-indigo py-3" type="button" style="bottom:10px;" onclick="location.href='http://env-test.r-e.kr'"> -->
+            <button class="replay w-btn w-btn-indigo py-3" type="button" style="bottom:10px;" onclick="location.href='http://127.0.0.1:8000'">
                 다시하기
             </button>
             
@@ -143,23 +144,29 @@
                     description: '#성격테스트 #지구온난화 #탄소배출 #탄소발자국',
                     imageUrl: "https://i.ibb.co/m4HqYG2/water-bear.png",
                     link: {
-                        mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
-                        webUrl: 'http://env-test.r-e.kr/share/'+result_num
+                        // mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
+                        // webUrl: 'http://env-test.r-e.kr/share/'+result_num,
+                        mobileWebUrl: 'http://127.0.0.1:8000/'+result_num,
+                        webUrl: 'http://127.0.0.1:8000/'+result_num
                     }
                     },
                     buttons: [
                     {
                         title: '웹으로 보기',
                         link: {
-                        mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
-                        webUrl: 'http://env-test.r-e.kr/share/'+result_num
+                        // mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
+                        // webUrl: 'http://env-test.r-e.kr/share/'+result_num,
+                        mobileWebUrl: 'http://127.0.0.1:8000/'+result_num,
+                        webUrl: 'http://127.0.0.1:8000/'+result_num
                         }
                     },
                     {
                         title: '앱으로 보기',
                         link: {
-                        mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
-                        webUrl: 'http://env-test.r-e.kr/share/'+result_num
+                        // mobileWebUrl: 'http://env-test.r-e.kr/share/'+result_num,
+                        // webUrl: 'http://env-test.r-e.kr/share/'+result_num,
+                        mobileWebUrl: 'http://127.0.0.1:8000/'+result_num,
+                        webUrl: 'http://127.0.0.1:8000/'+result_num
                         }
                     }
                     ]
@@ -168,12 +175,14 @@
 
                 function shareTwitter() {
                 var sendText = "env_test";
-                var sendUrl = 'http://env-test.r-e.kr/share/'+result_num;
+                // var sendUrl = 'http://env-test.r-e.kr/share/'+result_num;
+                var sendUrl = 'http://127.0.0.1:8000/'+result_num;
                 window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);  //Twitter에 전송 정보 파라미터 삽입  
                     }
                 function shareFacebook() {
                 var sendText = "env_test";
-                var sendUrl = 'http://env-test.r-e.kr/share/'+result_num;
+                // var sendUrl = 'http://env-test.r-e.kr/share/'+result_num;
+                var sendUrl = 'http://127.0.0.1:8000/'+result_num;
                 window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);  //Twitter에 전송 정보 파라미터 삽입  
                     }
             </script>

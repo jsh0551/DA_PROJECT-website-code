@@ -79,28 +79,29 @@ WSGI_APPLICATION = 'DA_PROJECT.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'app_db',
-        'USER' : 'root',
-        'PASSWORD' : 'bistudy',
-        'HOST' : '34.64.127.115',
-        'PORT' : 3306,
-        'OPTIONS' : {
-            "autocommit" : True,
-            "charset" : "utf8mb4"
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+## GCP MYSQL SERVER
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'app_db',
+#         'USER' : 'root',
+#         'PASSWORD' : 'bistudy',
+#         'HOST' : '34.64.127.115',
+#         'PORT' : 3306,
+#         'OPTIONS' : {
+#             "autocommit" : True,
+#             "charset" : "utf8mb4"
+#         }
+#     }
+# }
 
 
 # Password validation

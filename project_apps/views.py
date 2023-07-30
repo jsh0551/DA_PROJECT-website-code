@@ -45,8 +45,8 @@ def createform(request):
                     'electro':ans.electro,'coffee':ans.coffee,'food':ans.food,
                     'max_value':ans.max_value, 'min_value':ans.min_value})
     else:
-        return redirect("http://env-test.r-e.kr")
-        # return redirect("http://127.0.0.1:8000")
+        # return redirect("http://env-test.r-e.kr")
+        return redirect("http://127.0.0.1:8000")
 
 def share_page(request,result_num):
     return render(request, f"{result_num}.html")
