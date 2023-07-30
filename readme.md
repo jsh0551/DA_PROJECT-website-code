@@ -4,22 +4,22 @@
 
 - 테스트 시작
   
-![test_start](https://github.com/jsh0551/DA_PROJECT/assets/95104793/8018ec18-2bdb-4ace-97a5-37a0e4f0111c)
+<img src=".img/test_start.png" width="70%" height="70%"/>
 
 - 테스트 화면
 
-![test1](https://github.com/jsh0551/DA_PROJECT/assets/95104793/38d29e1b-43d9-449c-81bc-629b8a598f6f)
+<img src=".img/test1.png" width="70%" height="70%"/>
 
-![test2](https://github.com/jsh0551/DA_PROJECT/assets/95104793/d89b9091-cb6b-4d7f-8a00-eebc43deea53)
+<img src=".img/test2.png" width="70%" height="70%"/>
 
-![test3](https://github.com/jsh0551/DA_PROJECT/assets/95104793/fa62a5d7-e577-4e96-877e-8453e4de3215)
+<img src=".img/test3.png" width="70%" height="70%"/>
 
 
 - 결과창
 
-![result1](https://github.com/jsh0551/DA_PROJECT/assets/95104793/139db0ac-ae4d-4024-b5b2-ba72e496c3bc)
+<img src=".img/result1.png" width="70%" height="70%"/>
 
-![result2](https://github.com/jsh0551/DA_PROJECT/assets/95104793/8b3f9561-7420-4423-9aa0-32546e60409f)
+<img src=".img/result2.png" width="70%" height="70%"/>
 
 ## 로컬에서 실행
 ```
